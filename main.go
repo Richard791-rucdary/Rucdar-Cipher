@@ -73,7 +73,7 @@ err := json.NewDecoder(read.Body).Decode(&vex)
 		http.Error(write, "Invalid JSON request", http.StatusBadRequest)
 		return
 	}
-	oth := strings.Split(vex[0].Text, " ")
+	oth := strings.Split(vex.Text, " ")
 	for i := 0; i < len(oth); i++ {
 		for j := 0; j < len(codeMethod); j++ {
 			if oth[i] == codeMethod[j].Rd {
