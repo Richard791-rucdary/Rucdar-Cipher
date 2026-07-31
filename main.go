@@ -66,7 +66,7 @@ write.Header().Set("Access-Control-Allow-Headers", "Content-Type")
 		return
 	}
 	
-	var vex []ret
+	var vex ret
 	var txt string
 err := json.NewDecoder(read.Body).Decode(&vex)
 	if err != nil {
